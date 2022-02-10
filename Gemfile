@@ -33,6 +33,54 @@ gem "bootsnap", require: false
 # gem "sassc-rails"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+# Flexible authentication solution for Rails with Warden.
+gem 'devise'
+# Can Can Can
+gem 'cancancan'
+# Kaminari Pagination
+gem 'kaminari'
+# Cleaner view templating language
+gem 'slim'
+gem 'slim-rails'
+# Simple, efficient background processing for Ruby
+gem 'sidekiq', '~> 6.2'
+# Schedule addon for sidekiq
+gem 'sidekiq-cron', '~> 1.2'
+# Background Job
+gem 'active_link_to' # helper for 'active' state of a link
+gem 'simple_form' # Simpler rails forms
+# cpf cnpj
+gem 'cpf_cnpj'
+# Validations
+gem 'validators'
+# A simple HTTP and REST client for Ruby
+gem 'redcarpet' # handling markdown
+gem 'rest-client'
+# Gem to execute redirect to post in controllers
+gem 'repost'
+
+# PDF manipulation
+gem 'combine_pdf' # Merge PDF files
+gem 'hexapdf' # Write in pdfs
+gem 'prawn' # Helps creating pdf files as well
+gem 'prawn-table' # Prawn extension to generate tables
+gem 'pdf-reader' # For reading PDF files
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary', '~> 0.12.6'
+gem 'humanize'
+
+# Image optimization
+gem 'mini_magick'
+
+# Monitoring gems
+gem 'sentry-rails' # Sentry for Ruby on Rails
+gem 'sentry-ruby' # Sentry for Ruby
+gem 'sentry-sidekiq' # Sentry for Sidekiq
+
+gem 'lograge' # Incoming request logger
+
+# Business time calculation
+gem 'business_time'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -92,3 +140,4 @@ group :test do
   gem 'super_diff'
   gem 'vcr'
 end
+
