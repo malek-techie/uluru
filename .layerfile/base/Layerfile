@@ -33,10 +33,10 @@ RUN sudo -u postgres -H -- psql -t -c "CREATE DATABASE mydb;"
 RUN sudo -u postgres -H -- psql -c "ALTER ROLE root WITH PASSWORD 'password';"
 
 # Copy your rails app into the runner
-COPY . .
+COPY ../../ .
 
-COPY Gemfile .
-COPY Gemfile.lock .
+COPY ../../Gemfile .
+COPY ../../Gemfile.lock .
 
 # set up database
 RUN echo -e 'development:\n\
