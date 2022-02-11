@@ -72,7 +72,7 @@ alias crails=‘doppler run -- rails c’
 alias dsidekiq=‘doppler run -- bundle exec sidekiq’
 ```
 
-### Setup steps
+#### Setup steps
 
 1. Setup [Doppler](https://doppler.com/) to configure your environment variables. Read more below.
 2. Run `docker-compose up -d` to start MongoDB and Redis instances if you are using Docker.
