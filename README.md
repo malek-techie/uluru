@@ -56,24 +56,6 @@ To test e-mail sending in development, you should use [MailCatcher](https://mail
      bundle exec brakeman
      ```
   
-## Useful Tools for your Tests
-  Test is important to reliability and safety of your code (don't brake things without knowing it!) 
-  IMHO, unit and some integration tests should also not depend on env vars, so in order to mock it properly, we have some good gems for that in this project
-   - vcr (Record your test suite's HTTP interactions and replay them during future test runs) - https://github.com/vcr/vcr
-   - timecop (A gem providing "time travel" and "time freezing" capabilities, making it dead simple to test time-dependent code) - https://github.com/travisjeffery/timecop
-   - factory_bot (factory_bot is a fixtures replacement with a straightforward definition syntax) - https://github.com/thoughtbot/factory_bot
-   - ffaker (ffaker is a rewrite of faker: is used to easily generate fake data) https://github.com/ffaker/ffaker
-   - webmock (Library for stubbing and setting expectations on HTTP requests in Ruby) - https://github.com/bblimke/webmock
-   - capybara (Capybara helps you test web applications by simulating how a real user would interact with your app) - https://github.com/teamcapybara/capybara
-   - simplecov (SimpleCov is a code coverage analysis tool for Ruby) - https://github.com/simplecov-ruby/simplecov
-    
-   To run the test suite in this projects is kind of simple
-   ```
-     bundle exec rspec ./spec
-   ```
-
-   If your application grows up, you could try to considerer running it in parallel. More info you can find on next topics.
-
 ## How to run?
 
 ### Without doppler
@@ -127,7 +109,30 @@ alias dsidekiq=‘doppler run -- bundle exec sidekiq’
 5. Run `doppler run -- bundle exec sidekiq` to give sidekiq access to Doppler environment variables.
 6. Run `doppler run -- rails s` to start rails server and start development :)
 
+
+
+## About Tests
+### Useful Tools for your Tests
+  Test is important to reliability and safety of your code (don't brake things without knowing it!) 
+  IMHO, unit and some integration tests should also not depend on env vars, so in order to mock it properly, we have some good gems for that in this project
+   - vcr (Record your test suite's HTTP interactions and replay them during future test runs) - https://github.com/vcr/vcr
+   - timecop (A gem providing "time travel" and "time freezing" capabilities, making it dead simple to test time-dependent code) - https://github.com/travisjeffery/timecop
+   - factory_bot (factory_bot is a fixtures replacement with a straightforward definition syntax) - https://github.com/thoughtbot/factory_bot
+   - ffaker (ffaker is a rewrite of faker: is used to easily generate fake data) https://github.com/ffaker/ffaker
+   - webmock (Library for stubbing and setting expectations on HTTP requests in Ruby) - https://github.com/bblimke/webmock
+   - capybara (Capybara helps you test web applications by simulating how a real user would interact with your app) - https://github.com/teamcapybara/capybara
+   - simplecov (SimpleCov is a code coverage analysis tool for Ruby) - https://github.com/simplecov-ruby/simplecov
+    
+   To run the test suite in this projects is kind of simple
+   ```
+     bundle exec rspec ./spec
+   ```
+
+   If your application grows up, you could try to considerer running it in parallel. More info you can find on next topics.
+
+
 ### Run tests faster
+
 ```
   # setup
   bundle exec rake parallel:create
@@ -140,6 +145,8 @@ alias dsidekiq=‘doppler run -- bundle exec sidekiq’
   bundle exec rake parallel:spec
   bundle exec rake "parallel:spec[spec/lib]" # similar to 'rspec spec/lib' (quotes needed for zsh)
 ```
+
+## Additional Information
 
 ### WSL Preparation
 
@@ -172,7 +179,7 @@ We use [Webapp.io](https://webapp.io/) as our continuous integration service. Af
 branch will be run in our CI pipeline. You may need to access the progress of that processing and it can be done logging in LayerCI using
 your github account and them accessing [our projects page](layerci.com/bxblue).
 
-## Issues
+## Other Issues
 
 ##### On Ubuntu 19.04
 
