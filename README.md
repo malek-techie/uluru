@@ -72,7 +72,7 @@ alias crails=‘doppler run -- rails c’
 alias dsidekiq=‘doppler run -- bundle exec sidekiq’
 ```
 
-## Setup steps
+### Setup steps
 
 1. Setup [Doppler](https://doppler.com/) to configure your environment variables. Read more below.
 2. Run `docker-compose up -d` to start MongoDB and Redis instances if you are using Docker.
@@ -82,7 +82,7 @@ alias dsidekiq=‘doppler run -- bundle exec sidekiq’
 5. Run `doppler run -- bundle exec sidekiq` to give sidekiq access to Doppler environment variables.
 6. Run `doppler run -- rails s` to start rails server and start development :)
 
-#### Run tests faster
+### Run tests faster
 ```
   # setup
   bundle exec rake parallel:create
@@ -96,7 +96,7 @@ alias dsidekiq=‘doppler run -- bundle exec sidekiq’
   bundle exec rake "parallel:spec[spec/lib]" # similar to 'rspec spec/lib' (quotes needed for zsh)
 ```
 
-#### WSL Preparation
+### WSL Preparation
 
 This will install needed dependencies and setup gnome-keyring, which is necessary to store Doppler secrets.
 
@@ -121,7 +121,7 @@ EOS
 source ~/.bash_profile
 ```
 
-## Webapp.io
+### Webapp.io
 
 We use [Webapp.io](https://webapp.io/) as our continuous integration service. After each push in a opened pull request the code from given
 branch will be run in our CI pipeline. You may need to access the progress of that processing and it can be done logging in LayerCI using
