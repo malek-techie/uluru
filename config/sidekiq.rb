@@ -12,13 +12,6 @@ end
 
 sidekiq_config = { url: redis_url }
 
-default_autoscaler_config = {
-  min_workers: 1,
-  max_workers: 3,
-  worker_capacity: 50,
-  enabled: false
-}
-
 Sidekiq.configure_client do |config|
   redis_size = ENV.fetch('RAILS_MAX_THREADS', 6).to_i
   config.redis = ConnectionPool.new(size: redis_size) { Redis.new(sidekiq_config) }
