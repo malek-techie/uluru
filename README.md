@@ -40,8 +40,27 @@ To test e-mail sending in development, you should use [MailCatcher](https://mail
     ```
 3. Go to http://127.0.0.1:1080/ to see the emails being sent.
 
-### Doppler Setup
 
+## Useful Code Quality Tools
+  We don't like smelly codes, so in order to help that we have mainly 3 tools at this project
+   - rubocop (RuboCop is a Ruby static code analyzer (a.k.a. linter) and code formatter) - https://github.com/rubocop/rubocop
+   - reek (Code smell detector for Ruby) - https://github.com/troessner/reek
+   - brakeman (Brakeman is a static analysis tool which checks Ruby on Rails applications for security vulnerabilities)  - https://github.com/presidentbeef/brakeman
+  
+## Useful Tools for your Tests
+  Test is important to reliability and safety of your code (don't brake things without knowing it!) 
+  IMHO, unit and some integration tests should also not depend on env vars, so in order to mock it properly, we have some good gems for that in this project
+   - vcr (Record your test suite's HTTP interactions and replay them during future test runs) - https://github.com/vcr/vcr
+   - timecop (A gem providing "time travel" and "time freezing" capabilities, making it dead simple to test time-dependent code) - https://github.com/travisjeffery/timecop
+   - factory_bot (factory_bot is a fixtures replacement with a straightforward definition syntax) - https://github.com/thoughtbot/factory_bot
+   - ffaker (ffaker is a rewrite of faker: is used to easily generate fake data) https://github.com/ffaker/ffaker
+   - webmock (Library for stubbing and setting expectations on HTTP requests in Ruby) - https://github.com/bblimke/webmock
+   - capybara (Capybara helps you test web applications by simulating how a real user would interact with your app) - https://github.com/teamcapybara/capybara
+   - simplecov (SimpleCov is a code coverage analysis tool for Ruby) - https://github.com/simplecov-ruby/simplecov
+    
+### Doppler Setup
+  Doppler tool helps to store env var at centralized safe place instead of using .env files that could got leakage of sensitive data. It also a good tool for local development.
+  
 - If you're using Windows Linux Subsystem (WSL), read `WSL Preparation` below.
 - Install [Doppler CLI](https://docs.doppler.com/docs/cli)
 - Logout from Doppler web dashboard if you're logged in
