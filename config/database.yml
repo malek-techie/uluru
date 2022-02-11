@@ -6,11 +6,17 @@ default: &default
 development:
   <<: *default
   database: uluru_development
-
+  host: localhost
+  
 test:
   <<: *default
   database: uluru_test
+  host: localhost
+
+staging:
+  <<: *default  
+    url: <%= ENV['DATABASE_URL'] %>
 
 production:
-  <<: *default
-    url: url: <%= ENV['DATABASE_URL'] %>
+  <<: *default  
+    url: <%= ENV['DATABASE_URL'] %>
