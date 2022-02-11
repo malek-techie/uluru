@@ -74,6 +74,16 @@ To test e-mail sending in development, you should use [MailCatcher](https://mail
 
    If your application grows up, you could try to considerer running it in parallel. More info you can find on next topics.
 
+## How to run?
+
+### Without doppler
+  You need an env var file (.env) in order to be good... but I advise using Doppler.
+  
+  ```
+  bundle exec rails s
+  bundle exec sidekiq
+  ```
+  
 ### Doppler Setup
   Doppler tool helps to store env var at centralized safe place instead of using .env files that could got leakage of sensitive data. It also a good tool for local development.
   
@@ -221,3 +231,6 @@ It probably means your rails installation is present in the system but corrupted
     gem install rails
   ```
   in order to update your rails install.
+
+
+
