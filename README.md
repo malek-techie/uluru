@@ -44,8 +44,17 @@ To test e-mail sending in development, you should use [MailCatcher](https://mail
 ## Useful Code Quality Tools
   We don't like smelly codes, so in order to help that we have mainly 3 tools at this project
    - rubocop (RuboCop is a Ruby static code analyzer (a.k.a. linter) and code formatter) - https://github.com/rubocop/rubocop
+     ```
+      bundle exec rubocop -a
+     ```
    - reek (Code smell detector for Ruby) - https://github.com/troessner/reek
+     ```
+     bundle exec reek app spec config lib
+     ```
    - brakeman (Brakeman is a static analysis tool which checks Ruby on Rails applications for security vulnerabilities)  - https://github.com/presidentbeef/brakeman
+     ```
+     bundle exec brakeman
+     ```
   
 ## Useful Tools for your Tests
   Test is important to reliability and safety of your code (don't brake things without knowing it!) 
@@ -58,6 +67,13 @@ To test e-mail sending in development, you should use [MailCatcher](https://mail
    - capybara (Capybara helps you test web applications by simulating how a real user would interact with your app) - https://github.com/teamcapybara/capybara
    - simplecov (SimpleCov is a code coverage analysis tool for Ruby) - https://github.com/simplecov-ruby/simplecov
     
+   To run the test suite in this projects is kind of simple
+   ```
+     bundle exec rspec ./spec
+   ```
+
+   If your application grows up, you could try to considerer running it in parallel. More info you can find on next topics.
+
 ### Doppler Setup
   Doppler tool helps to store env var at centralized safe place instead of using .env files that could got leakage of sensitive data. It also a good tool for local development.
   
