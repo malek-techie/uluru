@@ -97,7 +97,7 @@ group :development, :test do
   # Ruby code quality scanner
   gem 'rubocop', require: false
   # Integration with RSpec
-  gem 'rubocop-rspec', '~> 2.3.0', require: false
+  gem 'rubocop-rspec', '~> 2.8.0', require: false
   # rubocop rails cops
   gem 'rubocop-rails'
   # rubocop performance cops
